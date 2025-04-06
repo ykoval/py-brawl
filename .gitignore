@@ -1,0 +1,59 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+
+# Virtual environments
+venv/
+env/
+.env/
+.venv/
+ENV/
+
+# IDE specific files
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Logs and databases
+*.log
+*.db
+*.sqlite
+*.sqlite3
+
+# OS specific files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Pygame specific
+*.pyc
+*.pyo
+*.pyd
+
+# Game specific
+screenshots/
+highscores.json
+saves/
+config.json
+
+# Generated files
+assets/icons/png/*.png
+
+# Temporary files
+*.bak
+*.swp
+*~
