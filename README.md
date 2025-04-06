@@ -1,4 +1,4 @@
-# Py-Brawl: A Simplified Brawl Stars Game
+# Py-Brawl: A Simplified Game indpiredd by Brawl Stars 
 
 A beginner-friendly Python implementation of a simplified Brawl Stars-inspired game designed to help children learn programming concepts.
 
