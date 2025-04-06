@@ -104,25 +104,33 @@ This project demonstrates many programming concepts that can help children learn
 
 ## Screenshots
 
-### Title Screen
-![Title Screen](assets/screenshots/scr_title.jpeg)
-*The welcome screen where players can start a new game or exit.*
-
-### Brawler Selection
-![Brawler Selection](assets/screenshots/scr_brawlers.jpeg)
-*Choose from different brawlers, each with unique attributes and abilities.*
-
-### Gameplay
-![Gameplay](assets/screenshots/scr_battle.jpeg)
-*Fight against enemies in the arena, with health bars, ammo indicators, and boss icons visible.*
-
-### Victory Screen
-![Victory](assets/screenshots/scr_win.jpeg)
-*Successfully complete all waves to see the victory screen!*
-
-### Game Over
-![Game Over](assets/screenshots/scr_loose.jpeg)
-*When your health reaches zero, the game ends with this screen.*
+<table>
+  <tr>
+    <td align="center">
+      <img src="assets/screenshots/scr_title.jpeg" width="400"><br>
+      <em>Title Screen</em>
+    </td>
+    <td align="center">
+      <img src="assets/screenshots/scr_brawlers.jpeg" width="400"><br>
+      <em>Brawler Selection</em>
+    </td>
+    <td align="center">
+      <img src="assets/screenshots/scr_battle.jpeg" width="400"><br>
+      <em>Gameplay</em>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="assets/screenshots/scr_win.jpeg" width="400"><br>
+      <em>Victory Screen</em>
+    </td>
+    <td align="center">
+      <img src="assets/screenshots/scr_loose.jpeg" width="400"><br>
+      <em>Game Over Screen</em>
+    </td>
+    <td></td>
+  </tr>
+</table>
 
 ## Extension Ideas for Learning
 
