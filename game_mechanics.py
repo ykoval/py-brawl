@@ -6,48 +6,48 @@ from game_engine import GameState, SCREEN_WIDTH, SCREEN_HEIGHT, PyBrawl
 
 # Arrays for dynamic enemy name generation
 WHO = [
-    "Путин",
-    "Лавров",
-    "Ваня",
-    "Шойгу",
-    "Медведев",
-    "Песков",
-    "Рохлин",
-    "Собчак",
-    "Патрушев",
-    "Жириновский",
-    "Герасимов",
-    "Кадыров",
-    "Чуркин",
-    "Володин",
-    "Мишустин",
-    "Сурков",
-    "Бабурин",
-    "Ткачёв",
-    "Коровин",
-    "Гиркин"
+    "Smith",
+    "Johnson",
+    "Williams",
+    "Jones",
+    "Brown",
+    "Davis",
+    "Miller",
+    "Wilson",
+    "Moore",
+    "Taylor",
+    "Anderson",
+    "Thomas",
+    "Jackson",
+    "White",
+    "Harris",
+    "Martin",
+    "Thompson",
+    "Garcia",
+    "Martinez",
+    "Robinson"
 ]
 
 TERMS = [
-    "Пидор",
-    "Урод",
-    "Лох",
-    "Трус",
-    "Свинья",
-    "Идиот",
-    "Балабол",
-    "Колбаса",
-    "Говноед",
-    "Мразь",
-    "Тварь",
-    "Жопа",
-    "Убийца",
-    "Обманщик",
-    "Сволочь",
-    "Лохмотник",
-    "Шлюха",
-    "Безмозгов",
-    "Говняшник"
+    "Runner",
+    "Fighter",
+    "Rusher",
+    "Sneaky",
+    "Tough",
+    "Clever",
+    "Talker",
+    "Speedy",
+    "Powerful",
+    "Tricky",
+    "Shifty",
+    "Jumper",
+    "Hunter",
+    "Defender",
+    "Swift",
+    "Steady",
+    "Shooter",
+    "Thinker",
+    "Sprinter"
 ]
 
 def generate_map(self):
@@ -346,7 +346,7 @@ def spawn_boss(self):
     boss_health = random.randint(150, 200)
     
     # Generate a boss name with a title prefix
-    boss_prefixes = ["Пахан", "Командир", "Дегенерал", "Владыка", "Сцарь"]
+    boss_prefixes = ["Chief", "Commander", "General", "Overlord", "King"]
     
     # Get available words (not used by other bosses or regular enemies)
     available_prefixes = [prefix for prefix in boss_prefixes if prefix not in self.used_first_words]

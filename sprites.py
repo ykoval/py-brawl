@@ -159,101 +159,108 @@ class SpriteManager:
             return self.get_scaled_sprite('ground', width, height)  # Default to ground
 
     def create_boss_icons(self):
-        """Create disrespectful boss icons using Pygame drawing primitives"""
+        """Create boss icons using Pygame drawing primitives"""
         size = 24
         
-        # Boss icons ("Пахан" - mocking the thug boss)
-        self.boss_icons["Пахан"] = []
+        # Create boss icons
+        self.boss_icons = {}
         
-        # Broken fist/thumbs down icon
+        # Chief icons
+        self.boss_icons["Chief"] = []
+        
+        # Fist icon
         fist = pygame.Surface((size, size), pygame.SRCALPHA)
-        # Base shape (red-ish)
-        pygame.draw.circle(fist, (255, 80, 80), (size//2, size//2), size//2 - 2)
-        # Thumbs down gesture
-        pygame.draw.rect(fist, (200, 50, 50), (size//3, size//3, size//3, size//2))
-        pygame.draw.circle(fist, (200, 50, 50), (size//2, size*5//6), size//6)
-        # Add a crossed-out effect
-        pygame.draw.line(fist, (255, 255, 255), (size//4, size//4), (size*3//4, size*3//4), 3)
-        pygame.draw.line(fist, (255, 255, 255), (size*3//4, size//4), (size//4, size*3//4), 3)
-        self.boss_icons["Пахан"].append(fist)
+        pygame.draw.circle(fist, (200, 200, 200), (size//2, size//2), size//2 - 2)
+        pygame.draw.line(fist, (100, 100, 100), (size//3, size//3), (size*2//3, size*2//3), 3)
+        pygame.draw.line(fist, (100, 100, 100), (size//3, size*2//3), (size*2//3, size//3), 3)
+        self.boss_icons["Chief"].append(fist)
         
-        # Toilet paper roll instead of fire
-        toilet = pygame.Surface((size, size), pygame.SRCALPHA)
-        # Roll base
-        pygame.draw.ellipse(toilet, (240, 240, 240), (size//4, size//4, size//2, size//2))
-        pygame.draw.ellipse(toilet, (200, 200, 200), (size//4+2, size//4+2, size//2-4, size//2-4))
-        # Hanging paper
-        pygame.draw.rect(toilet, (240, 240, 240), (size//2-2, size//2, 4, size//2))
-        pygame.draw.arc(toilet, (240, 240, 240), (size//4, size*2//3, size//2, size//3), 0, 3.14, 3)
-        self.boss_icons["Пахан"].append(toilet)
+        # Badge icon
+        badge = pygame.Surface((size, size), pygame.SRCALPHA)
+        pygame.draw.polygon(badge, (200, 200, 200), [
+            (size//2, 2),  # Top
+            (2, size//2),  # Left
+            (size//2, size-2),  # Bottom
+            (size-2, size//2),  # Right
+        ])
+        pygame.draw.circle(badge, (150, 150, 150), (size//2, size//2), size//4)
+        self.boss_icons["Chief"].append(badge)
         
-        # Commander icons ("Командир" - mock military leader)
-        self.boss_icons["Командир"] = []
+        # Commander icons
+        self.boss_icons["Commander"] = []
         
-        # Broken medal/participation trophy
+        # Medal icon
         medal = pygame.Surface((size, size), pygame.SRCALPHA)
         # Base shape
-        pygame.draw.circle(medal, (255, 215, 0), (size//2, size//2), size//2 - 2)
-        # "Participation" ribbon (blue rather than gold)
-        pygame.draw.polygon(medal, (100, 100, 255), [
+        pygame.draw.circle(medal, (220, 180, 50), (size//2, size//2), size//2 - 2)
+        # Ribbon
+        pygame.draw.polygon(medal, (100, 100, 180), [
             (size//2, size//4),
             (size//3, size*2//3),
             (size*2//3, size*2//3)
         ])
-        # Add #1 LOSER text suggestion
-        pygame.draw.line(medal, (0, 0, 0), (size//2-4, size//2-2), (size//2-4, size//2+4), 2)  # L
-        pygame.draw.arc(medal, (0, 0, 0), (size//2-2, size//2-2, 7, 7), 3.14, 6.28, 2)  # o
-        self.boss_icons["Командир"].append(medal)
+        # Star in the center
+        pygame.draw.polygon(medal, (255, 255, 255), [
+            (size//2, size//3),  # Top
+            (size//2 + 5, size//2),  # Right
+            (size//2, size*2//3),  # Bottom
+            (size//2 - 5, size//2),  # Left
+        ])
+        self.boss_icons["Commander"].append(medal)
         
-        # "Дегенерал" icons (instead of "Генерал" - mock authority even more)
-        self.boss_icons["Дегенерал"] = []
+        # General icons
+        self.boss_icons["General"] = []
         
-        # Paper shield/toilet seat cover
+        # Shield icon
         shield = pygame.Surface((size, size), pygame.SRCALPHA)
-        # Toilet seat shape
-        pygame.draw.ellipse(shield, (240, 240, 240), (2, 2, size-4, size*2//3))
-        pygame.draw.ellipse(shield, (200, 200, 200), (size//4, size//6, size//2, size//3))
-        # Handle/tank
-        pygame.draw.rect(shield, (200, 200, 200), (size//3, size*2//3, size//3, size//3))
-        # Water effect
-        pygame.draw.arc(shield, (100, 200, 255), (size//4, size//3, size//2, size//4), 0, 3.14, 2)
-        self.boss_icons["Дегенерал"].append(shield)
+        # Shield shape
+        pygame.draw.polygon(shield, (70, 70, 200), [
+            (size//2, 4),  # Top
+            (4, size//3),  # Left
+            (size//2, size-4),  # Bottom
+            (size-4, size//3),  # Right
+        ])
+        # Star emblem
+        pygame.draw.polygon(shield, (255, 255, 200), [
+            (size//2, size//3),  # Top
+            (size//2 + 6, size//2),  # Right
+            (size//2, size*2//3),  # Bottom
+            (size//2 - 6, size//2),  # Left
+        ])
+        self.boss_icons["General"].append(shield)
         
-        # Overlord icons ("Владыка" - mock royalty)
-        self.boss_icons["Владыка"] = []
+        # Overlord icons
+        self.boss_icons["Overlord"] = []
         
-        # Burger King style paper crown
+        # Crown icon
         crown = pygame.Surface((size, size), pygame.SRCALPHA)
-        # Base shape - yellow paper
-        pygame.draw.polygon(crown, (255, 230, 100), [
-            (2, size*2//3),  # Bottom left
-            (size-2, size*2//3),  # Bottom right
+        # Crown base
+        pygame.draw.polygon(crown, (220, 180, 50), [
+            (4, size*2//3),  # Bottom left
+            (size-4, size*2//3),  # Bottom right
             (size*3//4, size//3),  # Right peak
-            (size//2, size//2),  # Middle valley (higher)
+            (size//2, size//2),  # Middle valley
             (size//4, size//3),  # Left peak
         ])
-        # Ketchup and mustard stains
-        pygame.draw.circle(crown, (255, 50, 50), (size//4, size//2), 3)  # Ketchup
-        pygame.draw.circle(crown, (255, 200, 50), (size*3//4, size//2), 3)  # Mustard
-        # Crumpled effect
-        pygame.draw.line(crown, (200, 180, 80), (size//3, size//2), (size//3, size*2//3), 1)
-        pygame.draw.line(crown, (200, 180, 80), (size*2//3, size//2), (size*2//3, size*2//3), 1)
-        self.boss_icons["Владыка"].append(crown)
+        # Gems on the crown
+        pygame.draw.circle(crown, (255, 50, 50), (size//4, size//3), 3)  # Ruby
+        pygame.draw.circle(crown, (50, 50, 255), (size//2, size//2), 3)  # Sapphire
+        pygame.draw.circle(crown, (50, 255, 50), (size*3//4, size//3), 3)  # Emerald
+        self.boss_icons["Overlord"].append(crown)
         
-        # "Сцарь" icons (instead of "Царь" - mock supreme authority even more)
-        self.boss_icons["Сцарь"] = []
+        # King icons
+        self.boss_icons["King"] = []
         
-        # Toy scepter/broken stick
+        # Scepter icon
         scepter = pygame.Surface((size, size), pygame.SRCALPHA)
-        # Stick (bent/broken)
-        pygame.draw.line(scepter, (150, 120, 50), (size//2, size//4), (size//2+5, size*3//4), 3)
-        pygame.draw.line(scepter, (150, 120, 50), (size//2+5, size*3//4), (size//2, size*7//8), 3)
-        # Plastic toy gem
-        pygame.draw.circle(scepter, (255, 100, 255), (size//2, size//4), size//6)  # Pink plastic
-        pygame.draw.circle(scepter, (200, 150, 200), (size//2, size//4), size//10)  # Highlight
-        # Scotch tape holding it together
-        pygame.draw.rect(scepter, (200, 200, 200, 150), (size//2-2, size*3//4-3, 10, 6), border_radius=1)
-        self.boss_icons["Сцарь"].append(scepter)
+        # Scepter staff
+        pygame.draw.rect(scepter, (150, 120, 50), (size//2-3, size//4, 6, size*2//3))
+        # Ornate top
+        pygame.draw.circle(scepter, (220, 180, 50), (size//2, size//4), size//6)
+        pygame.draw.circle(scepter, (255, 50, 50), (size//2, size//4), size//10)  # Ruby
+        # Base of scepter
+        pygame.draw.rect(scepter, (220, 180, 50), (size//2-6, size*2//3+5, 12, 5), border_radius=3)
+        self.boss_icons["King"].append(scepter)
 
     def get_boss_icon(self, boss_prefix):
         """Get a random boss icon for the given prefix"""
