@@ -30,6 +30,12 @@ py-brawl/
 ├── assets/
 │   └── images/
 │       └── brawlers/  (Add brawler images here)
+│   └── screenshots/
+│       └── scr_title.jpeg
+│       └── scr_brawlers.jpeg
+│       └── scr_battle.jpeg
+│       └── scr_win.jpeg
+│       └── scr_loose.jpeg
 ├── main.py            (Main entry point)
 ├── py_brawl.py        (Original entry script - forwards to main.py)
 ├── game_engine.py     (Core game engine)
@@ -95,6 +101,28 @@ This project demonstrates many programming concepts that can help children learn
 - **Game Physics**: Movement, velocity, and direction
 - **Modularity**: Breaking code into manageable parts
 - **Game Design**: Balancing gameplay elements
+
+## Screenshots
+
+### Title Screen
+![Title Screen](assets/screenshots/scr_title.jpeg)
+*The welcome screen where players can start a new game or exit.*
+
+### Brawler Selection
+![Brawler Selection](assets/screenshots/scr_brawlers.jpeg)
+*Choose from different brawlers, each with unique attributes and abilities.*
+
+### Gameplay
+![Gameplay](assets/screenshots/scr_battle.jpeg)
+*Fight against enemies in the arena, with health bars, ammo indicators, and boss icons visible.*
+
+### Victory Screen
+![Victory](assets/screenshots/scr_win.jpeg)
+*Successfully complete all waves to see the victory screen!*
+
+### Game Over
+![Game Over](assets/screenshots/scr_loose.jpeg)
+*When your health reaches zero, the game ends with this screen.*
 
 ## Extension Ideas for Learning
 
