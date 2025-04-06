@@ -10,7 +10,7 @@ A beginner-friendly Python implementation of a simplified Brawl Stars-inspired g
 - **Combat Mechanics**: Shoot projectiles and defeat enemy robots
 - **Level Features**: Navigate around walls and hide in bushes
 - **Score System**: Earn points by defeating enemies
-- **Russian-Themed Bosses**: Face challenging boss enemies with Russian prefixes (Пахан, Командир, Генерал, Владыка, Царь)
+- **Russian-Themed Bosses**: Face challenging boss enemies with Russian prefixes (Пахан, Командир, Дегенерал, Владыка, Сцарь)
 - **Disrespectful Boss Icons**: Each boss type has unique mocking icons that appear alongside their names
 - **Health Indicators**: Visual health bars appear above all characters
 - **Ammo System**: Dynamic ammo reload indicators show your available shots and recharge progress
