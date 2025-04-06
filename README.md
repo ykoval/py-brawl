@@ -128,7 +128,12 @@ This project demonstrates many programming concepts that can help children learn
       <img src="assets/screenshots/scr_loose.jpeg" width="400"><br>
       <em>Game Over Screen</em>
     </td>
-    <td></td>
+    <td align="center">
+      <a href="https://youtu.be/BWT3Wa08SwE" target="_blank">
+        <img src="https://img.youtube.com/vi/BWT3Wa08SwE/hqdefault.jpg" width="400"><br>
+        <em>Gameplay Video (YouTube)</em>
+      </a>
+    </td>
   </tr>
 </table>
 
